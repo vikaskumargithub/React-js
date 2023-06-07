@@ -1,0 +1,32 @@
+// life Cycle Method
+// Use Class component Did mount method 
+// Make a class component 
+// No effect of state and props 
+
+
+import './App.css';
+import React from 'react';
+class App extends React.Component{
+constructor()
+{
+  super()
+  this.state={
+    name:"vikas"
+  }
+}
+componentDidMount()
+{
+  console.log("componentDidMount")
+}
+render()
+{
+  console.log("render")
+  return(
+    <div className='App'>
+      <h1>component Did Mount {this.state.name} </h1>
+      <button onClick={()=>{this.setState({name:"kumar"})}} > Update Name</button>
+    </div>
+  );
+}
+}
+export default App;
